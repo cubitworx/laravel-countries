@@ -1,0 +1,30 @@
+{
+	"name": "cubitworx/laravel-countries",
+	"version": "1.0.0",
+	"description": "Table of countries as per 3166-1",
+	"keywords": ["laravel", "countries", "3166-1"],
+	"license": "MIT",
+	"type": "library",
+	"authors": [
+		{
+			"name": "Charles Louw",
+			"email": "charles.louw@gmail.com"
+		}
+	],
+	"require": {
+		"php": "^7.1.3",
+		"laravel/framework": "^5.5.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"Cubitworx\\Laravel\\Countries\\": "src/"
+		}
+	},
+	"extra": {
+		"laravel": {
+			"providers": [
+				"Cubitworx\\Laravel\\Countries\\Providers\\ServiceProvider"
+			]
+		}
+	}
+}
