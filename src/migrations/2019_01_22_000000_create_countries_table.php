@@ -19,6 +19,7 @@ class CreateCountriesTable extends Migration {
 
 			$table->boolean('active')->default(0);
 			$table->string('iso_3166_1', 2);
+			$table->string('nationality')->nullable();
 
 			$table->integer( 'created_by' )->nullable();
 			$table->integer( 'updated_by' )->nullable();
