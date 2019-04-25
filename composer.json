@@ -1,6 +1,6 @@
 {
 	"name": "cubitworx/laravel-countries",
-	"version": "1.0.0-alpha.2",
+	"version": "1.0.0-alpha.3",
 	"description": "Table of countries as per 3166-1",
 	"keywords": ["laravel", "countries", "3166-1"],
 	"license": "MIT",

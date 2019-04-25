@@ -13,6 +13,7 @@ class SeedCountriesTable extends Migration {
 	public function up() {
 		DB::table('countries')->truncate();
 
+		// sqlite limitation: insert size limited by SQLITE_MAX_SQL_LENGTH
 		Model\Country::insert([
 			['iso_3166_1'=>'AD', 'name'=>'Andorra', 'nationality' => 'Andorian', 'active'=>0],
 			['iso_3166_1'=>'AE', 'name'=>'United Arab Emirates', 'nationality' => 'Emirian', 'active'=>0],
@@ -111,6 +112,9 @@ class SeedCountriesTable extends Migration {
 			['iso_3166_1'=>'GW', 'name'=>'Guinea-Bissau', 'nationality' => null, 'active'=>0],
 			['iso_3166_1'=>'GY', 'name'=>'Guyana', 'nationality' => 'Guyanese', 'active'=>0],
 			['iso_3166_1'=>'HK', 'name'=>'Hong Kong', 'nationality' => 'Hongkonger', 'active'=>0],
+		]);
+
+		Model\Country::insert([
 			['iso_3166_1'=>'HM', 'name'=>'Heard Island and McDonald Islands', 'nationality' => null, 'active'=>0],
 			['iso_3166_1'=>'HN', 'name'=>'Honduras', 'nationality' => null, 'active'=>0],
 			['iso_3166_1'=>'HR', 'name'=>'Croatia', 'nationality' => 'Croatian', 'active'=>0],
@@ -210,6 +214,9 @@ class SeedCountriesTable extends Migration {
 			['iso_3166_1'=>'RW', 'name'=>'Rwanda', 'nationality' => null, 'active'=>0],
 			['iso_3166_1'=>'SA', 'name'=>'Saudi Arabia', 'nationality' => 'Saudi Arabian', 'active'=>0],
 			['iso_3166_1'=>'SB', 'name'=>'Solomon Islands', 'nationality' => null, 'active'=>0],
+		]);
+
+		Model\Country::insert([
 			['iso_3166_1'=>'SC', 'name'=>'Seychelles', 'nationality' => 'Seychellois Creole', 'active'=>0],
 			['iso_3166_1'=>'SD', 'name'=>'Sudan', 'nationality' => 'Sudanese', 'active'=>0],
 			['iso_3166_1'=>'SE', 'name'=>'Sweden', 'nationality' => 'Swedish', 'active'=>0],
