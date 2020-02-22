@@ -17,16 +17,13 @@ class CreateCountriesTable extends Migration {
 
 			$table->string('name');
 
-			$table->boolean('active')->default(0);
-			$table->string('iso_3166_1', 2);
+			$table->boolean('active')->default(1)->index();
+			$table->string('iso_3166_1', 2)->unique();
 			$table->string('nationality')->nullable();
 
 			$table->integer( 'created_by' )->nullable();
 			$table->integer( 'updated_by' )->nullable();
 			$table->timestamps();
-
-			$table->unique('iso_3166_1');
-			$table->index('active');
 		});
 	}
 
